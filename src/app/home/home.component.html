@@ -29,7 +29,8 @@
         <p class="game-name">{{ game.name }}</p>
         <div class="game-platforms">
           <img
-            src="https://www.psu.com/wp/wp-content/uploads/2019/01/ps5-logo-branding-768x557.jpg"
+            *ngFor="let gamePlatform of game.parent_platforms"
+            src="assets/images/platforms/{{ gamePlatform.platform.slug }}.svg"
             alt="slug"
             class="game-platform"
           />
